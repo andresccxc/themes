@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import React, { useContext } from 'react';
+import AppProvider from '../context/context';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
 
-export default MyApp
+  return (
+    <AppProvider>
+      <Component {...pageProps} />
+    </AppProvider>
+  )
+};
+
+export default MyApp;
