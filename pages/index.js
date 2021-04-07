@@ -1,8 +1,12 @@
+/** @jsx jsx */
+/** @jsxRuntime classic */ 
+
 import { useEffect, useContext } from 'react';
 import { AppContext } from '../context/context';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css';
 import axios from 'axios';
+import { jsx } from '@emotion/react'
 
 
 export default function Home() {
@@ -23,13 +27,15 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
+      <header css={{
+        backgroundColor: 'hotpink',
+        '&:hover': {
+          color: 'lightgreen'
+        }
+      }}>
         HEADER
       </header>
-      <div>
-        <p>{title}</p>
-        <p>{description}</p>
-      </div>
+
     </div>
   )
 }
