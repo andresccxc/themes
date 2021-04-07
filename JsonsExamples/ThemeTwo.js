@@ -1,17 +1,17 @@
-export const themeOne = [
+export const themeTwo = [
     {
-        type:"header-one",
+        type:"header-two",
         content:{
-            description: 'Hola mundo desde el componente 2',
+            description: 'Hola mundo',
             style:{
-                fontSize:15,
+                fontSize:24,
                 color: 'darkorchid',
             },
         },
         style : {
             background: [
                 'red',
-                'linear-gradient(#e66465, #9198e5)'
+                'linear-gradient(#e67425, #5488e5)'
               ],
         }
     }
