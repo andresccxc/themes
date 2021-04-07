@@ -1,13 +1,15 @@
-import React, { useContext } from 'react';
-import AppProvider from '../context/context';
+import { Provider } from 'react-redux';
+import { store, persistor } from '../redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
 import '../styles/globals.css';
-
 function MyApp({ Component, pageProps }) {
 
   return (
-    <AppProvider>
-      <Component {...pageProps} />
-    </AppProvider>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Component {...pageProps} />
+      </PersistGate>
+    </Provider>
   )
 };
 

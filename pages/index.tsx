@@ -1,33 +1,31 @@
 /** @jsx jsx */
-/** @jsxRuntime classic */ 
+/** @jsxRuntime classic */
 
-import { useEffect, useContext } from 'react';
-import { AppContext } from '../context/context';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
+import { setTheme } from '../redux/themes/actions';
 import { jsx } from '@emotion/react'
-import {path} from '../paths/path';
-import dynamic from "next/dynamic";
-import {themeOne} from '../JsonsExamples/ThemeOne';
-import {themeTwo} from '../JsonsExamples/themeTwo';
-
-const Header = dynamic(()=>import('../themes/header-one/HeaderOne'));
 
 export default function Home() {
-  const { theme, setTheme } = useContext(AppContext);
+  const dispatch = useDispatch();
+  const { theme } = useSelector((state: any) => state.theme);
 
   useEffect(() => {
     const getTheme = async () => {
       const { data } = await axios('http://localhost:3000/api/themes');
-      setTheme(data);
     }
     getTheme();
   }, []);
-  
+
+  const changeTheme = () => {
+    dispatch(setTheme('New theme prros'))
+  };
+
   return (
-    <div css={theme && theme[0]?.style}>
-      {<Header title={theme && theme[0]?.content.description} />}
-      <button onClick={()=>setTheme(themeOne)}>Cambiar tema 1</button>
-      <button onClick={()=>setTheme(themeTwo)}>Cambiar tema 2</button>
+    <div>
+      <p>Redux</p>
+      <button onClick={changeTheme}>Cambiar tema</button>
     </div>
   )
 }
