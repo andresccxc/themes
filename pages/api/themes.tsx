@@ -1,5 +1,5 @@
-import {themeOne} from '../../JsonsExamples/ThemeOne';
-import {themeTwo} from '../../JsonsExamples/themeTwo';
+import { themeOne, themeTwo } from "../../JsonsExamples/jsonRequest";
+
 const themes = [themeOne,themeTwo];
 
 export default (req, res) => {
