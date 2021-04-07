@@ -3,10 +3,12 @@
 
 import { useEffect, useContext } from 'react';
 import { AppContext } from '../context/context';
-import Head from 'next/head'
 import axios from 'axios';
 import { jsx } from '@emotion/react'
+import {path} from '../paths/path';
+import dynamic from "next/dynamic";
 
+const Header = dynamic(()=>import('../themes/header-one/HeaderOne'));
 
 export default function Home() {
   const { theme, setTheme } = useContext(AppContext);
@@ -18,23 +20,10 @@ export default function Home() {
     }
     getTheme();
   }, []);
-
-
+  
   return (
-    <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <header css={{
-        backgroundColor: 'hotpink',
-        '&:hover': {
-          color: 'lightgreen'
-        }
-      }}>
-        HEADER
-      </header>
-
+    <div css={theme && theme[0]?.style}>
+      {<Header title='sas' />}
     </div>
   )
 }
