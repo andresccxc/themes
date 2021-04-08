@@ -6,6 +6,7 @@ import { jsx,Global, css } from '@emotion/react'
 import React from 'react';
 import { IndexT } from '../themes/thema4';
 import { AboutT } from '../themes/thema4/about';
+import { AboutTTwo } from '../themes/theme3/about';
 
 class About extends React.Component<any> {
     state:{
@@ -26,7 +27,7 @@ class About extends React.Component<any> {
         return (
           <div >
             <Global styles={css`${globalStyles}`}/>
-            <AboutT value={aboutVariable}/>
+            <AboutTTwo value={aboutVariable}/>
           </div>
           
         )
