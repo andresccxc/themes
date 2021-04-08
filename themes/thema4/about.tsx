@@ -3,7 +3,6 @@ import { Header } from "./components/header";
 
 export function AboutT(props) {
   const { value } = props;
-  console.log(value)
   return (
     <>
       <Header title={value.title} nav={value.nav} />

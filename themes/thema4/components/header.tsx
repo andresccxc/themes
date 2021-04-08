@@ -1,6 +1,5 @@
 export function Header(props) {
     const {title,nav}=props;
-    console.log(nav)
   return (
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -22,7 +21,6 @@ export function Header(props) {
         {nav && (
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
               {nav.map((item:any,index)=>{
-                  console.log
                   return <a key={index} className="mr-5 hover:text-gray-900" href={item.path}>{item.name}</a>
               })}
           </nav>

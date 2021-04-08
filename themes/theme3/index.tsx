@@ -3,7 +3,6 @@ import { Header } from "./components/header";
 
 export const IndexTTwo = (props) => {
   const { value } = props;
-  console.log(value.products)
   return (
     <>
       <Header title={value.title} nav={value.nav} />
