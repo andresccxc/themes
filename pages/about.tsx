@@ -27,7 +27,7 @@ class About extends React.Component<any> {
         return (
           <div >
             <Global styles={css`${globalStyles}`}/>
-            <AboutTTwo value={aboutVariable}/>
+            <AboutT value={aboutVariable}/>
           </div>
           
         )

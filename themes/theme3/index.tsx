@@ -7,8 +7,8 @@ export const IndexTTwo = (props) => {
     <>
       <Header title={value.title} nav={value.nav} />
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-wrap -m-3">
+        <div className="container flex flex-wrap px-5 py-24 mx-auto">
+          <div className="flex flex-wrap w-9/12">
             {value?.products.map((item:any,index)=>{
               return <div key={index} className="lg:w-1/3 md:w-1/2 p-3 w-full cardsProduct">
               <a className="block relative h-48 rounded overflow-hidden">
@@ -29,6 +29,9 @@ export const IndexTTwo = (props) => {
               </div>
             </div>
             })}
+          </div>
+          <div className="flex flex-wrap w-3/12">
+            Aqui va un carrito compras si tuviera uno
           </div>
         </div>
       </section>

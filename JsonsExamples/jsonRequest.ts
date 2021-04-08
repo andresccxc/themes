@@ -1,5 +1,5 @@
 export const themeOne = {
-  selected_theme: "theme-one",
+  selected_theme: "theme-two",
   styles: {
     "header": {
       backgroundColor: "hotpink",
@@ -250,19 +250,31 @@ export const themeOne = {
 };
 
 export const themeTwo = {
-  selected_theme: "theme-two",
+  selected_theme: "theme-one",
   styles: {
-    header: {
+    "header": {
       backgroundColor: "hotpink",
       
     },
     ".cardsProduct": {
-      backgroundColor: "gray",
+      backgroundColor: "red",
+      color:"#1E8449",
+      marginBottom: "10rem"
     },
   },
   pages: {
     index: {
-      title: "Mi tienda",
+      title: "Mi tienda xxx",
+      nav : [
+        {
+          name:"inicio",
+          path:"/"
+        },
+        {
+          name:"about",
+          path:"/about"
+        },
+      ],
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       products: [
@@ -450,6 +462,10 @@ export const themeTwo = {
       ],
       footer: {
         columnOne: {
+          description:
+            "um has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was",
+        },
+        columnTwo: {
           socialMedia: {
             facebook: {
               img:
@@ -465,5 +481,21 @@ export const themeTwo = {
         },
       },
     },
+    about:{
+      title: "Mi tienda xxx",
+      nav : [
+        {
+          name:"inicio",
+          path:"/"
+        },
+        {
+          name:"about",
+          path:"/about"
+        },
+      ],
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      email:"tu-conejita-caliente@yoque.se",
+    }
   },
 };
