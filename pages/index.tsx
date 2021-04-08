@@ -4,7 +4,7 @@
 import axios from 'axios';
 import { jsx,Global, css } from '@emotion/react'
 import React from 'react';
-import { IndexT } from '../themes/thema4';
+import { IndexTTwo } from '../themes/theme3';
 
 class Index extends React.Component<any> {
   state:{
@@ -25,7 +25,7 @@ class Index extends React.Component<any> {
     return (
       <div >
         <Global styles={css`${globalStyles}`}/>
-        <IndexT value={indexVariable}/>
+        <IndexTTwo value={indexVariable}/>
       </div>
       
     )
