@@ -4,10 +4,11 @@
 import { useEffect } from 'react';
 import axios from 'axios';
 import { setTheme } from '../redux/themes/actions';
-import { jsx } from '@emotion/react'
+import { jsx,Global, css } from '@emotion/react'
 import dynamic from "next/dynamic";
 import React from 'react';
 import { path } from '../path/path';
+import { IndexT } from '../themes/thema4';
 
 class Index extends React.Component<any> {
   state:{
@@ -23,9 +24,15 @@ class Index extends React.Component<any> {
   render(){
     
     const { theme } = this.props;
-    console.log(theme)
+    const indexVariable = theme.pages.index;
+    const globalStyles = theme.styles
+
     return (
-      <div>Fuck my life</div>
+      <div >
+        <Global styles={css`${globalStyles}`}/>
+        <IndexT value={indexVariable}/>
+      </div>
+      
     )
   }
 }
