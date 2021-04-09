@@ -1,22 +1,30 @@
 import { ActionKeys, ThemesActions } from './types';
-const { SET_THEME, SET_ERROR } = ActionKeys;
+const { SET_THEMES, SET_THEME, SET_ERROR } = ActionKeys;
+
 interface ThemesState {
-    theme: any;
+    themes: any;
+    currentTheme: string;
     error: string;
 };
 
 const initialState: ThemesState = {
-    theme: 'dark',
+    themes: {},
+    currentTheme: 'theme2',
     error: ''
 };
 
 export const reducer = (state: ThemesState = initialState, { type, payload }: ThemesActions): ThemesState => {
     switch (type) {
 
+        case SET_THEMES:
+            return {
+                ...state,
+                themes: payload
+            };
         case SET_THEME:
             return {
                 ...state,
-                theme: payload
+                currentTheme: payload
             };
         case SET_ERROR:
             return {

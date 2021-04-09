@@ -1,7 +1,5 @@
-import { themeOne, themeTwo } from "../../JsonsExamples/jsonRequest";
-
-const themes = [themeOne,themeTwo];
+import { themes } from "../../JsonsExamples/json";
 
 export default (req, res) => {
-  res.status(200).json(themes[Math.floor(Math.random() * themes.length)])
-}
+  res.status(200).json(themes);
+};
