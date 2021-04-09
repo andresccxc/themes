@@ -20,3 +20,10 @@ When user open web app, app select a theme random and it save on redux store, ne
 through `emotion`[https://emotion.sh/docs/introduction] library
 
 Depending on the selected theme, it charge the components from theme which found in folder `/themes`, the components have default tailwind class but to personalize, tags have an empty class whose name and configuration are saved in json
+
+## Branch: template-andres
+There is a folder called `data` which have a file with a object which simulate a json response from a api.
+This object contains the structure and global styles of each theme.
+In the app there is a lateral component which allows to change the current theme, which is permanently savedthanks to redux persitance. 
+Each theme has its own components but they share the same configuration.
+
