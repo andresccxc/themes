@@ -1,34 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+There are two way to manage templates, each one have itself branch `Idea-Nicolas` and `Template-andres`
 
-## Getting Started
+## Installation
+* npm install
 
-First, run the development server:
+## Usage
+* npm start
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Branch:  Idea-Nicolas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+There is a folder called `JsonExamples` which have a file with two object which simulate a json response from a api.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+this json's have the next properties:
+`selected_theme` which is to select theme,
+`styles` which have a style object
+`pages` which have information to show on each page,
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# Flow
+When user open web app, app select a theme random and it save on redux store, next for each one page extract to styles and configure Global component to it create a css virtual dom 
+through `emotion`[https://emotion.sh/docs/introduction] library
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Depending on the selected theme, it charge the components from theme which found in folder `/themes`, the components have default tailwind class but to personalize, tags have an empty class whose name and configuration are saved in json
