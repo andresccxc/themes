@@ -24,6 +24,6 @@ Depending on the selected theme, it charge the components from theme which found
 ## Branch: template-andres
 There is a folder called `data` which have a file with a object which simulate a json response from a api.
 This object contains the structure and global styles of each theme.
-In the app there is a lateral component which allows to change the current theme, which is permanently savedthanks to redux persitance. 
+In the app there is a lateral component which allows to change the current theme, which is permanently saved thanks to redux persitance. 
 Each theme has its own components but they share the same configuration.
 
