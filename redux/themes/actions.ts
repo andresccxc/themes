@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import { RootState } from "../rootReducer";
 import { ActionKeys, SetTheme, SetError, ThemesActions } from './types';
@@ -10,6 +11,13 @@ export const setTheme = (theme: any): ThunkAction<Promise<void>, RootState, {}, 
         dispatch(setThemeAction(theme));
     }
 };
+
+export const loadTheme =  (): ThunkAction<Promise<void>, RootState, {}, ThemesActions> => {
+    return async (dispatch: ThunkDispatch<RootState, {}, ThemesActions>) => {
+        const theme = await axios("http://localhost:3000/api/themes");
+        dispatch(setThemeAction(theme.data));
+    }
+}
 
 
 export const setThemeAction = (theme: any): SetTheme => ({

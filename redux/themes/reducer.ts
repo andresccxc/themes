@@ -1,5 +1,5 @@
 import { ActionKeys, ThemesActions } from './types';
-const { SET_THEME, SET_ERROR } = ActionKeys;
+const { SET_THEME, LOAD_THEME , SET_ERROR } = ActionKeys;
 interface ThemesState {
     theme: any;
     error: string;
@@ -18,6 +18,11 @@ export const reducer = (state: ThemesState = initialState, { type, payload }: Th
                 ...state,
                 theme: payload
             };
+        case LOAD_THEME:
+            return {
+                ...state,
+                theme: payload
+            }
         case SET_ERROR:
             return {
                 ...state,
