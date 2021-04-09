@@ -31,7 +31,7 @@ export const IndexTTwo = (props) => {
             })}
           </div>
           <div className="flex flex-wrap w-3/12">
-            Aqui va un carrito compras si tuviera uno
+            Aqui va un carrito de compras si tuviera uno
           </div>
         </div>
       </section>

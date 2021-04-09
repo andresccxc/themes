@@ -1,5 +1,6 @@
 export enum ActionKeys {
     SET_THEME = 'SET_THEME',
+    LOAD_THEME  = 'LOAD_THEME',
     SET_ERROR = 'SET_ERROR',
 };
 
@@ -13,4 +14,9 @@ export interface SetError {
     payload: string
 };
 
-export type ThemesActions = SetTheme | SetError;
+export interface LoadTheme {
+    type: ActionKeys.LOAD_THEME,
+    theme: any
+}
+
+export type ThemesActions = SetTheme | LoadTheme | SetError;
