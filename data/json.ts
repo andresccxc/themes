@@ -84,26 +84,31 @@ export const themes = {
                 products: [{
                     name: 'Redmi Note 9T 128gb',
                     img: 'https://cdn.shopify.com/s/files/1/0485/4566/1094/products/RedmiNote9T-4_300x.jpg?v=1613852932',
-                    price: 78500
+                    price: 78500,
+                    qualification: [7,1,9],
                 },
                 {
-                    name: 'Redmi Note 9 Pro 128gb',
+                    name: 'Redmi Note 9 Pro',
                     img: 'https://cdn.shopify.com/s/files/1/0485/4566/1094/products/RedmiNote9Pro-1_900x.jpg?v=1604954259',
-                    price: 22500
+                    price: 22500,
+                    qualification: [8,5,2,9,1]
                 },
                 {
                     name: 'Mi 10T Lite 5G 64gb',
                     img: 'https://cdn.shopify.com/s/files/1/0485/4566/1094/products/Mi10TLite-2_900x.jpg?v=1611942917',
-                    price: 45500
+                    price: 45500,
+                    qualification: [6,7]
                 }, {
                     name: 'Poco X3 NFC 128GB',
                     img: 'https://cdn.shopify.com/s/files/1/0485/4566/1094/products/PocoX3-2_900x.jpg?v=1605841101',
-                    price: 12500
+                    price: 12500,
+                    qualification: [1,2,3]
                 },
                 {
-                    name: 'iPhone 12 Pro Max 256GB',
+                    name: 'iPhone 12 Pro',
                     img: 'https://cdn.shopify.com/s/files/1/0485/4566/1094/products/iPhone12ProMax-4_900x.jpg?v=1610739542',
-                    price: 99999
+                    price: 99999,
+                    qualification: [3,1,2,3]
                 }
                 ]
             }
@@ -128,7 +133,7 @@ export const themes = {
                     },
 
                 ],
-                copyright: 'Copyright © 1999-2021 Ccxc Colombia.'
+                copyright: 'Copyright © 1999-2021 CCXC Colombia.'
             },
             styles: {
                 bgColor: '#fff159',
@@ -140,3 +145,4 @@ export const themes = {
     },
 };
 
+export const allfilters = ['Precio', 'Nuevo', 'Destacado', 'Promoción', 'Popular', 'Pirata'];

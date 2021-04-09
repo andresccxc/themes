@@ -24,7 +24,7 @@ const Home = () => {
     'theme1': <Theme1 data={theme1} />,
     'theme2': <Theme2 data={theme2} />
   };
-  console.log('tema actual',currentTheme);
+
   return (
     <div className='relative'>
       <Head>
@@ -34,7 +34,7 @@ const Home = () => {
           crossorigin="anonymous"
         />
       </Head>
-      {template[currentTheme]} 
+      {template[currentTheme]}
       <ChangeTheme />
     </div>
   );

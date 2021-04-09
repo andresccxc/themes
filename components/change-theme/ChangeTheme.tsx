@@ -12,7 +12,7 @@ const ChangeTheme = () => {
     const changeTheme = (theme: string) => {
         dispatch(setTheme(theme));
         setBrushClass('');
-    }
+    };
 
 
     return (

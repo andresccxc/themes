@@ -1,4 +1,4 @@
-import { themes } from "../../JsonsExamples/json";
+import { themes } from "../../data/json";
 
 export default (req, res) => {
   res.status(200).json(themes);

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { CardContainer } from './Styles';
 import { setCart } from '../../../redux/cart/actions';
+import { CardContainer } from './Styles';
 
 
 

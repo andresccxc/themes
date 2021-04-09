@@ -11,6 +11,7 @@ export const MainContainer = styled.div`
 `;
 export const Filters = styled.div`
    width:30%;
+   padding:4.6875rem 0;
    .container-filters{
        width:28.75rem;
        background-color:#fff159;
@@ -45,5 +46,68 @@ export const Filters = styled.div`
 `;
 export const Products = styled.div`
    width:70%;
-   border:0.0625rem solid blue;
+`;
+
+export const CardContainer = styled.div`
+  width:11.25rem;
+  height:18.75rem;
+  border-radius:0.625rem;
+  box-shadow: 0rem 0rem 0.3125rem 0rem rgba(50, 50, 50, 0.75);
+  margin:1.25rem 3.125rem;
+  .card-header,.card-body{
+    height:50%;
+  }
+  .card-header{
+    background-size:cover;
+    background-image:url('https://image.freepik.com/foto-gratis/telefonos-celulares-viejos-obsoletos-sobre-fondo-negro_35378-3090.jpg');
+    border-radius:0.625rem 0.625rem 0 0;
+    .product-image{
+      width:11.25rem;
+      bottom:-2.1875rem;
+      right:-4.375rem;
+      transform:rotate(-45deg);
+      transition:.4s all;
+      cursor: pointer;
+    }
+  }
+  .card-body{
+    padding:0.625rem;
+    .add-cart{
+      width:4.6875rem;
+      border:0.0625rem solid #ccc; 
+      font-size:0.875rem;
+      .add-item{
+        width:33.3%;
+        display:inline-block;
+        border-right:0.0625rem solid #ccc;
+        text-align:center;
+        cursor: pointer;
+        &:last-of-type{
+          border-right:none
+        }
+      }
+    }
+    .add-cart-icon{
+        top:0.3125rem;
+        margin-left:0.5rem;
+        cursor: pointer;
+        color:green;
+    }
+    .fa-star{
+      color:black;
+      font-size:0.875rem;
+    }
+    .cont-price{
+      width:100px;
+      background-color:#fff159;
+      text-align:center;
+      box-shadow: 0rem 0rem 0.3125rem 0rem rgba(50, 50, 50, 0.75);
+      font-size:0.875rem;
+      padding:0.1875rem;
+      color:#7e7e7e;
+      cursor: pointer;
+      right:-0.9375rem;
+      bottom:1.25rem;
+    }
+  }
 `;
