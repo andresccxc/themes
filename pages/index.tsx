@@ -10,11 +10,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Index = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(loadTheme());
-  }, [dispatch]);
-
   const { theme } = useSelector((state: any) => state.theme);
+  useEffect(() => {
+    theme === 'dark' ? dispatch(loadTheme()):{};
+  }, [dispatch]);
 
   const renderTheme = (key: string, pageVariable: any) => {
     switch (key) {

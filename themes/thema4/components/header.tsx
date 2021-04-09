@@ -1,5 +1,15 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { themeOne, themeTwo } from "../../../JsonsExamples/jsonRequest";
+import { setTheme } from "../../../redux/themes/actions";
+
 export function Header(props) {
-    const {title,nav}=props;
+  const dispatch = useDispatch();
+
+  const buttonAction = () => {
+    dispatch(setTheme(themeOne));
+  };
+  const { title, nav } = props;
   return (
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -20,12 +30,23 @@ export function Header(props) {
         </a>
         {nav && (
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-              {nav.map((item:any,index)=>{
-                  return <a key={index} className="mr-5 hover:text-gray-900" href={item.path}>{item.name}</a>
-              })}
+            {nav.map((item: any, index) => {
+              return (
+                <a
+                  key={index}
+                  className="mr-5 hover:text-gray-900"
+                  href={item.path}
+                >
+                  {item.name}
+                </a>
+              );
+            })}
           </nav>
         )}
-        <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+        <button
+          onClick={() => buttonAction()}
+          className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+        >
           Cambiar de tema
           <svg
             fill="none"

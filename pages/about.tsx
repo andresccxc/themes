@@ -2,11 +2,8 @@
 /** @jsxRuntime classic */
 
 import { jsx, Global, css } from "@emotion/react";
-import React, { useEffect } from "react";
-import { IndexTTwo } from "../themes/theme3";
-import { IndexT } from "../themes/thema4";
-import { loadTheme } from "../redux/themes/actions";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import { AboutTTwo } from "../themes/theme3/about";
 import { AboutT } from "../themes/thema4/about";
 
